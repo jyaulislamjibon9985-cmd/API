@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "industrial-safety-api"
+version = "1.0.0"
+description = "Smart Industrial Safety Monitoring API using FastAPI and Computer Vision"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "Safety Team", email = "safety@example.com"}
+]
+keywords = ["safety", "monitoring", "fastapi", "api", "industrial"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: FastAPI",
+    "Intended Audience :: Manufacturing",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+dependencies = [
+    "fastapi==0.104.1",
+    "uvicorn==0.24.0",
+    "sqlalchemy==2.0.23",
+    "psycopg2-binary==2.9.9",
+    "python-dotenv==1.0.0",
+    "pydantic==2.5.0",
+    "python-multipart==0.0.6",
+    "alembic==1.12.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "flake8>=6.0",
+]
+docker = [
+    "docker>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/industrial-safety-api"
+Documentation = "http://localhost:8000/docs"
+
+[tool.setuptools]
+packages = ["industrial_safety_api"]
